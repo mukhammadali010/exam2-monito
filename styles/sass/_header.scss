@@ -84,8 +84,6 @@ header{
         padding: 27px 37px;
         transform: translateX(-100%);
         opacity: .5;
-        display: none;
-
         i.fa-x{
             margin-left: 250px;
             font-size: 24px;
@@ -167,7 +165,6 @@ header{
         transform: translateX(0);
         transition: .5s ease-in-out;
         transition-timing-function: cubic-bezier(.29, 1.01, 1, -0.68);
-        display: block;
         opacity: 1;
     }
     header .container #check:not(:checked) ~ .menu-bar{
