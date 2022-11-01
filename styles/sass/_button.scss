@@ -1,0 +1,54 @@
+// primary button eni 203 , 163, br : 57px
+//card-btn  eni 248, br 8px
+
+
+@mixin button($width, $bgc, $br) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 28px 10px;
+    gap: 10px;
+    width: $width;
+    /* Primary Color/Dark Blue */
+    background: $bgc;
+    border-radius: $br;
+    outline: none;
+    border: 1px solid $primary_color;
+    margin: 0 1rem;
+    cursor: pointer;
+    &:hover{
+        background-color: transparent;
+        border: 1px solid $primary_color;
+        color: inherit;
+        transition: .8s ease-in-out;
+    }
+
+    font-family: 'SVN-Gilroy';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+   
+    display: flex;
+    align-items: flex-end;
+    /* Neutral Color/00 */
+    color: #fff;
+
+}
+
+@mixin inp($eni, $br) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 12px 20px 12px 16px;
+    gap: 12px;
+    width: $eni;
+    height: 44px;
+    /* Neutral Color/00 */
+    background: $white;
+    border-radius: $br;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    text-indent: 2rem;
+}

@@ -1,0 +1,137 @@
+section#adoption {
+    overflow: hidden;
+    z-index: -100;
+
+    .container {
+        .row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            .seller {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                h4 {
+                    span {
+                        font-weight: 500;
+                        font-size: 16px;
+                        margin-right: 5px;
+                    }
+                }
+
+                button {
+                    @include button(220px, transparent, 57px);
+                    color: $primary_color_child3;
+
+                    &:hover {
+                        i {
+                            transform: translateX(10px);
+                            transition: 1s ease-in-out;
+                        }
+                    }
+                }
+            }
+
+            .brands {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    margin: 5px 30px;
+                }
+            }
+
+            .row1 {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: #FFB775;
+                border-radius: 20px;
+                overflow: hidden;
+                position: relative;
+                width: 100%;
+
+                .content {
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    flex-direction: column;
+
+                    h1 {
+                        font-size: 52px;
+                        text-align: left;
+                    }
+
+                    h2 {
+                        font-size: 36px;
+                        text-align: left;
+                    }
+
+                    .text {
+                        text-align: left;
+                        z-index: 2;
+                    }
+
+                    .box2 {
+                        position: absolute;
+                        width: 782.29px;
+                        height: 635px;
+                        left: -220.67px;
+                        top: -200px;
+                        background: $secondary_color_child1;
+                        border-radius: 99px;
+                        transform: matrix(-0.9, 0.43, 0.43, 0.9, 0, 0);
+                        z-index: 1;
+                    }
+                }
+
+                .images {
+                    z-index: 4;
+                    position: relative;
+
+                    .box1 {
+                        position: absolute;
+                        width: 787.54px;
+                        height: 787.54px;
+                        left: 40.49px;
+                        top: 188.72px;
+                        /* Primary Color/Dark Blue 80 */
+                        background: linear-gradient(102.87deg, #FCEED5 6.43%, #FCEED5 78.33%, #FFE7BA 104.24%);
+                        opacity: 0.3;
+                        border-radius: 99px;
+                        transform: matrix(-0.88, 0.47, 0.47, 0.88, 0, 0);
+                        z-index: -1;
+                    }
+                }
+
+                .blok-btn {
+                    display: flex;
+                    z-index: 2;
+                    width: 500px;
+
+                    button:last-child {
+                        @include button(163px, transparent, 57px);
+                        border: 1px solid $primary_color;
+                        color: inherit;
+                    }
+
+                    button:first-child {
+                        @include button(163px, $primary_color, 57px);
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+@media(max-width:$md) {
+    section#adoption {
+        display: none;
+    }
+}

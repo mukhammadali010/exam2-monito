@@ -1,0 +1,232 @@
+section#hero {
+    background: linear-gradient(102.87deg, #FCEED5 6.43%, #FCEED5 78.33%, #FFE7BA 104.24%);
+    border-radius: 0 0 40px 40px;
+    height: 500px;
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+    .container {
+        height: 500px;
+
+
+
+        .row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .content {
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+                flex-direction: column;
+                position: relative;
+
+                button {
+                    z-index: 999;
+                }
+
+                .box2 {
+                    position: absolute;
+                    width: 67.1px;
+                    height: 67.1px;
+                    left: 0px;
+                    top: 0px;
+                    /* Secondary Color/Mon Yellow */
+                    background: $secondary_color;
+                    border-radius: 20px;
+                    transform: rotate(25.23deg);
+                    z-index: 1;
+                }
+            }
+
+            .images {
+                z-index: 4;
+
+                img {
+                    width: 680px;
+                    margin-top: 50px;
+                }
+
+                .box4 {
+                    position: absolute;
+                    width: 635px;
+                    height: 635px;
+                    left: 599.22px;
+                    top: 198px;
+                    /* Primary Color/Dark Blue */
+                    background: $primary_color;
+                    border-radius: 99px;
+                    transform: rotate(9.35deg);
+                    z-index: -3;
+                }
+
+                .box5 {
+                    position: absolute;
+                    width: 635px;
+                    height: 635px;
+                    left: 625.67px;
+                    top: 150px;
+                    /* Secondary Color/Mon Yellow */
+                    background: $secondary_color;
+                    border-radius: 99px;
+                    transform: rotate(25.23deg);
+                    z-index: -2;
+                }
+
+                .box6 {
+                    position: absolute;
+                    width: 21.47px;
+                    height: 21.47px;
+                    left: 627px;
+                    top: 133.64px;
+                    background: $primary_color;
+                    border-radius: 6px;
+                    transform: rotate(-43deg);
+                    z-index: 3;
+                }
+
+                .box7 {
+                    position: absolute;
+                    width: 27.5px;
+                    height: 27.5px;
+                    left: 625px;
+                    top: 125.68px;
+                    background: $secondary_color;
+                    border-radius: 9px;
+                    transform: rotate(-22.85deg);
+                }
+
+                .box8 {
+                    position: absolute;
+                    width: 14.63px;
+                    height: 14.63px;
+                    left: 652.19px;
+                    top: 88px;
+                    background: $secondary_color;
+                    border-radius: 4px;
+                    transform: rotate(20.79deg);
+                }
+            }
+
+            .blok-btn {
+                display: flex;
+
+                button:first-child {
+                    @include button(163px, transparent, 57px);
+                    border: 1px solid $primary_color;
+                    color: inherit;
+                    margin-left: 0;
+                }
+
+                button:last-child {
+                    @include button(163px, $primary_color, 57px);
+
+                    &:hover {
+                        background-color: transparent;
+                        border: 1px solid $primary_color;
+                        color: inherit;
+                    }
+                }
+            }
+
+            .box3 {
+                position: absolute;
+                width: 635px;
+                height: 635px;
+                left: -100px;
+                top: 420px;
+                /* Secondary Color/Mon Yellow */
+                background: $secondary_color;
+                opacity: 0.4;
+                border-radius: 99px;
+                transform: rotate(56.47deg);
+            }
+        }
+    }
+}
+
+
+// media for tablet 
+@media (max-width:$md) {
+
+    section#hero {
+        height: 810px;
+    }
+
+    section#hero.container {
+        height: 810px;
+    }
+
+    section#hero .container .row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column
+    }
+
+    section#hero .container .row .images .box4 {
+        position: absolute;
+        left: 99.22px;
+        top: 498px;
+    }
+
+    section#hero .container .row .images .box5 {
+        position: absolute;
+        left: 129.22px;
+        top: 498px;
+    }
+
+    section#hero .container .row .content .box3 {
+        display: none;
+    }
+}
+
+// media for tablet end
+
+// media for mobile
+
+@media (max-width:$sm) {
+    section#hero {
+        overflow: hidden;
+        height: 580px;
+    }
+
+    section#hero .container .row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    section#hero .container .row h1 {
+        font-size: 46px;
+        width: 90%;
+    }
+
+    section#hero .container .row h2 {
+        font-size: 28px;
+        width: 90%;
+    }
+
+    section#hero .container .row p.text {
+        width: 90%;
+        text-align: justify;
+    }
+
+    section#hero .container .row .images img {
+        width: 95%;
+    }
+
+    section#hero .container .row .images .box5,
+    section#hero .container .row .images .box4 {
+        top: 400px;
+        left: 20px;
+    }
+
+    section#hero .container .row .content .box3 {
+        display: none;
+    }
+}
+
+// media for mobile end

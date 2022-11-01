@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+}
+
+body{
+    .loading-blok{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: #f7dba78f;
+        z-index: 9998;
+        display: block;
+        visibility: hidden;
+        opacity: .9;
+        transition: 3s ease-in-out;
+        .loading {
+            position: fixed;
+            top: 50%;
+            left: 40%;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 10px dashed #000;
+            z-index: 9999;
+            animation: loading 3s;
+            visibility: visible;
+        }
+    }
+    .loading-blok{
+        transition: 3s ease-in-out;
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+@keyframes loading {
+    0%{
+        transform: rotate(0);
+        visibility: visible;
+        opacity: 1;
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+
+.container {
+    width: 1164px;
+    margin: 0 auto;
+}
+
+
+h1 {
+    width: 465px;
+    font-family: 'SVN-Gilroy';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 68px;
+    text-transform: capitalize;
+    color: $primary_color_child3;
+    z-index: 2;
+}
+
+h2 {
+    width: 452px;
+    height: 60px;
+    font-family: 'SVN-Gilroy';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 60px;
+    text-transform: capitalize;
+    color: $primary_color_child3;
+    z-index: 2;
+}
+
+p.text {
+    width: 480px;
+    height: 72px;
+    font-family: 'SVN-Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: $netural80;
+    margin-top: 24px;
+    margin-bottom: 34px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+li {
+    cursor: pointer;
+    list-style: none;
+    font-family: 'SVN-Gilroy';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: $primary_color;
+    padding: 0 24px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h3 {
+    font-family: 'SVN-Gilroy';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    text-transform: capitalize;
+    color: $primary_color;
+}
+
+
+h4 {
+    font-family: 'SVN-Gilroy';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;  
+    display: flex;
+    align-items: flex-end;
+    /* Neutral Color/100 */
+    color: $netural100;
+}
+
+p.card-text {
+    font-family: 'SVN-Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    /* identical to box height, or 150% */
+    /* Neutral Color/60 */
+    color: $netural60;
+}
+
+span.card-span {
+    font-family: 'SVN-Gilroy';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 18px;
+    /* Neutral Color/60 */
+    color: $netural60;
+    margin-left: 5px;
+}
+
+p.card-price {
+    font-family: 'SVN-Gilroy';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    display: flex;
+    align-items: flex-end;
+    /* Neutral Color/100 */
+    color: $netural100;
+}

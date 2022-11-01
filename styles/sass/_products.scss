@@ -1,0 +1,26 @@
+.free {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    gap: 2px;
+    width: 248px;
+    height: 34px;
+    /* Secondary Color/Mon Yellow 40 */
+    background: $secondary_color_child1;
+    border-radius: 8px;
+    margin: 10px 0;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: 'SVN-Gilroy';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    /* identical to box height, or 143% */
+    display: flex;
+    align-items: flex-end;
+    /* Primary Color/Dark Blue 80 */
+    color: $primary_color_child3;
+}

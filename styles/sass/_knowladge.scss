@@ -1,0 +1,101 @@
+section#knowladge {
+    .container {
+        .row {
+            padding: 60px 0;
+
+            .what {
+                font-family: 'SVN-Gilroy';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                /* identical to box height, or 150% */
+                color: #000000;
+            }
+
+            .take {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 10px;
+                margin-bottom: 30px;
+
+                button {
+                    @include button(163px, transparent, 57px);
+                    color: $primary_color;
+
+                    &:hover {
+                        i {
+                            transform: translateX(10px);
+                            transition: 1s ease-in-out;
+                        }
+                    }
+                }
+            }
+
+            .card-row {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                row-gap: 20px;
+                column-gap: 10px;
+
+                .card {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    padding: 8px 8px 0px;
+                    gap: 8px;
+                    width: 380px;
+                    height: 424px;
+                    background: #FFFFFF;
+                    /* Shadown 1 */
+                    box-shadow: 0px 4px 28px -2px rgba(0, 0, 0, 0.08);
+                    border-radius: 12px;
+
+                    .card-body {
+                        button {
+                            @include button(120px, #00A7E7, 28px);
+                            padding: 5px;
+                            margin: 0;
+                            border: 1px;
+                            height: 20px;
+                            font-size: 10px;
+                            color: #FDFDFD;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+
+                            &:hover {
+                                background-color: transparent;
+                                border: 1px solid #00A7E7;
+                            }
+                        }
+
+                        p {
+                            width: 348px;
+                            height: 60px;
+                            font-family: 'SVN-Gilroy';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 14px;
+                            /* Neutral Color/80 */
+                            color: $netural80;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// media 
+
+@media (max-width:$md) {
+    section#knowladge .container .row .card-row {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+        row-gap: 20px;
+        column-gap: 10px;
+    }
+}
+
+// media end

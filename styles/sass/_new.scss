@@ -1,0 +1,140 @@
+section#new {
+    .container {
+        .row {
+            padding: 60px 0;
+
+            .what {
+                font-family: 'SVN-Gilroy';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                /* identical to box height, or 150% */
+                color: #000000;
+            }
+
+            .take {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 10px;
+                margin-bottom: 30px;
+
+                button {
+                    @include button(163px, transparent, 57px);
+                    color: $primary_color;
+
+                    &:hover {
+                        i {
+                            transform: translateX(10px);
+                            transition: 1s ease-in-out;
+                        }
+                    }
+                }
+            }
+
+            .card-row {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+                justify-items: center;
+                row-gap: 20px;
+                column-gap: 12px;
+
+                .card {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    padding: 8px 8px 0px;
+                    gap: 8px;
+                    width: 280px;
+                    height: 398px;
+                    /* Neutral Color/00 */
+                    background: $white;
+                    box-shadow: 0px 4px 28px -2px rgba(0, 0, 0, 0.08);
+                    border-radius: 12px;
+
+                    .card-body {
+                        .gen {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+
+                            .dot {
+                                width: 2px;
+                                height: 2px;
+                                border-radius: 50%;
+                                background-color: $netural60;
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            .mobilebutton {
+                display: none;
+            }
+        }
+    }
+}
+
+// media for tablet
+
+@media(max-width:$md) {
+    section#new .container .row .card-row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        justify-items: center;
+        row-gap: 20px;
+        column-gap: 12px;
+    }
+
+    section#new .container .row .take,
+    section#new .container .row .what {
+        padding: 0 30px;
+    }
+
+}
+
+// media for tablet end
+
+// media for mobile
+
+
+@media (max-width:$sm) {
+    section#new .container .row .what {
+        font-size: 14px;
+    }
+
+    section#new .container .row .take h3 {
+        font-size: 20px;
+    }
+
+    section#new .container .row .take button {
+        display: none;
+    }
+
+    section#new .container .row .card-row .card {
+        width: 180px;
+
+        img {
+            width: 169px;
+        }
+    }
+
+    section#new .container .row .mobilebutton {
+        display: block;
+        @include button(360px, transparent, 57px);
+        margin: 0 auto;
+        color: $primary_color;
+        margin-top: 16px;
+        &:hover {
+            i {
+                transform: translateX(10px);
+                transition: 1s ease-in-out;
+            }
+        }
+    }
+}
+
+// media for mobile end
