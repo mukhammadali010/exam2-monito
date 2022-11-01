@@ -1365,6 +1365,7 @@ section#knowladge .container .row .take button {
   /* Neutral Color/00 */
   color: #fff;
   color: #003459;
+  display: block;
 }
 section#knowladge .container .row .take button:hover {
   background-color: transparent;
@@ -1458,6 +1459,11 @@ section#knowladge .container .row .card-row .card .card-body p {
     row-gap: 20px;
     -moz-column-gap: 10px;
          column-gap: 10px;
+  }
+}
+@media (max-width: 414px) {
+  section#knowladge .container .row .take button {
+    display: none;
   }
 }
 section#footer {

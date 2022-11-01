@@ -21,7 +21,7 @@ section#knowladge {
                 button {
                     @include button(163px, transparent, 57px);
                     color: $primary_color;
-
+                    display: block;
                     &:hover {
                         i {
                             transform: translateX(10px);
@@ -86,7 +86,7 @@ section#knowladge {
     }
 }
 
-// media 
+// media  for tablet
 
 @media (max-width:$md) {
     section#knowladge .container .row .card-row {
@@ -98,4 +98,14 @@ section#knowladge {
     }
 }
 
-// media end
+// media tablet end
+
+// media for mobile
+
+@media(max-width:$sm){
+    section#knowladge .container .row .take button{
+        display: none;
+    }
+
+}
+// media for mobile end
