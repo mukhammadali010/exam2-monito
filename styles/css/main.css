@@ -300,6 +300,7 @@ header .menu-bar {
   padding: 27px 37px;
   transform: translateX(-100%);
   opacity: 0.5;
+  display: none;
 }
 header .menu-bar i.fa-x {
   margin-left: 250px;
@@ -431,6 +432,7 @@ header #checksearch {
     transform: translateX(0);
     transition: 0.5s ease-in-out;
     transition-timing-function: cubic-bezier(0.29, 1.01, 1, -0.68);
+    display: block;
     opacity: 1;
   }
   header .container #check:not(:checked) ~ .menu-bar {
